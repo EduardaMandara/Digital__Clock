@@ -30,15 +30,67 @@ body {
     align-items: center;
 }
 
+#time .circle svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+#time .circle svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent; /*fundo do circulo transparente*/
+    stroke: #191919; /*cor das bordas do circulo*/
+    stroke-width: 4; /*espessura das bordas*/
+    transform: translate(5px 5px);
+}
+
+#time .circle svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440; /*define se o circulo será completo ou pela metade*/
+}
+
 #time div {
     position: absolute;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.5em;
+}
+
+#time div span {
+    position: absolute;
+    transform: translateX(-50%);
+    font-size: 0.35em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 #time .ap {
     position: relative;
-    font: 1em;
+    font-size: 1em;
     transform: translateX(-20px);
+}
+
+/* _____ DOTS _____ */
+.dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dots::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
 }
