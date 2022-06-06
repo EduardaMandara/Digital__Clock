@@ -9,9 +9,9 @@
 
 ### Quais são as tecnologias utilizadas?
 
-- [ ] HTML5;
-- [ ] CSS3;
-- [ ] JavaScript;
-- [ ] SVG.
+- [x] HTML5;
+- [x] CSS3;
+- [x] JavaScript;
+- [x] SVG.
 
 ### Agradeço a sua atenção desde já, um abraço! 🤗
